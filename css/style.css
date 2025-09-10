@@ -1,0 +1,280 @@
+/* Базовый ресет и шрифты */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    color: #222;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.site-header {
+    border-bottom: 1px solid #eee;
+    background: #fafafa;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
+    .logo img {
+        height: 48px;
+        display: block;
+    }
+
+.brand {
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+/* Навигация */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+    .main-nav a:hover, .main-nav a[aria-current="page"] {
+        background: #f0e6ff;
+        color: #4a148c;
+    }
+
+/* Hero */
+.hero {
+    background: linear-gradient(180deg, rgba(74,20,140,0.04), white 60%);
+    padding: 28px 0;
+}
+
+.hero-inner {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #3b0066;
+}
+
+.lead {
+    font-size: 16px;
+    margin-bottom: 14px;
+    color: #444;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    background: #7c4dff;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-outline {
+    border: 2px solid #7c4dff;
+    color: #7c4dff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Hero image */
+.hero-right {
+    width: 44%;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Grid карточек */
+.preview h2 {
+    margin: 18px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #3b0066;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 16px;
+}
+
+.card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+    .card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .card h3 {
+        padding: 12px 14px 6px;
+        font-size: 18px;
+    }
+
+    .card p {
+        padding: 0 14px 14px;
+        color: #555;
+    }
+
+/* Benefits */
+.benefits {
+    margin-top: 20px;
+}
+
+.benefit-list {
+    list-style: disc;
+    margin-left: 20px;
+    color: #444;
+}
+
+/* Footer */
+.site-footer {
+    margin-top: 28px;
+    background: #fafafa;
+    padding: 18px 0;
+    border-top: 1px solid #eee;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.site-footer a {
+    color: #7c4dff;
+    text-decoration: none;
+}
+
+.site-footer p {
+    margin-bottom: 6px;
+    color: #444;
+}
+
+/* Прайс-таблица (используется в price.html) */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+    .price-table th, .price-table td {
+        border: 1px solid #e6e6e6;
+        padding: 10px;
+        text-align: left;
+    }
+
+.price-high {
+    background: #ffe6e6;
+}
+/* дорогие */
+.price-medium {
+    background: #fff4d9;
+}
+/* средние */
+.price-low {
+    background: #e6ffea;
+}
+/* дешёвые */
+
+/* Отзывчивость */
+@media (max-width:900px) {
+    .hero-inner {
+        flex-direction: column-reverse;
+    }
+
+    .hero-right, .hero-left {
+        width: 100%;
+    }
+
+    .footer-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+
+/* Google Maps в рамке */
+.map-wrapper {
+    width: 100%;
+    max-width: 800px; /* Максимальная ширина карты */
+    height: 400px; /* Высота карты */
+    margin: 20px auto; /* Центрирование и отступ сверху/снизу */
+    padding: 5px; /* Отступ внутри рамки */
+    border: 3px solid #e6e6e6; /* Цвет и толщина рамки */
+    border-radius: 15px; /* Скругление углов */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Лёгкая тень */
+    overflow: hidden; /* Чтобы скругления применялись к iframe */
+}
+
+    .map-wrapper iframe {
+        width: 100%;
+        height: 100%;
+        border: 0; /* Убираем стандартную рамку iframe */
+        display: block;
+    }

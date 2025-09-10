@@ -1,0 +1,111 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Школа танцев «Круть-Верть» — Главная</title>
+    <meta name="description" content="Школа танцев 'Круть-Верть' — сальса, вальс, хип-хоп и детские группы. Присоединяйтесь!" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">
+                <img src="images/logo.png" alt="Логотип школы танцев Круть-Верть" />
+                <span class="brand">Школа танцев «Круть-Верть»</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Главная навигация">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Главная</a></li>
+                    <li><a href="about.html">О школе</a></li>
+                    <li><a href="catalog.html">Направления</a></li>
+                    <li><a href="price.html">Прайс</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-left">
+                    <h1>Танец — язык души. Присоединяйся к нам!</h1>
+                    <p class="lead">Студия «Круть-Верть» — уроки для взрослых и детей: сальса, вальс, хип-хоп и современные танцы. Удобное расписание, опытные преподаватели, тёплая атмосфера.</p>
+                    <div class="hero-cta">
+                        <a class="btn" href="catalog.html">Посмотреть направления</a>
+                        <a class="btn-outline" href="contact.html">Записаться на пробное</a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <img src="images/hero.jpg" alt="Танцевальная студия" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="container preview">
+            <h2>Популярные направления</h2>
+            <div class="grid">
+                <article class="card">
+                    <img src="images/salsa.jpg" alt="Сальса" />
+                    <h3>Сальса</h3>
+                    <p>Живой Круть-Верть, партнёрская работа и море эмоций. Подходит для начального и среднего уровней.</p>
+                </article>
+
+                <article class="card">
+                    <img src="images/waltz.jpg" alt="Вальс" />
+                    <h3>Классический вальс</h3>
+                    <p>Элегантность, осанка и правильное движение по паркету — идеально для бальных танцев.</p>
+                </article>
+
+                <article class="card">
+                    <img src="images/hiphop.jpg" alt="Хип-хоп" />
+                    <h3>Хип-хоп</h3>
+                    <p>Динамичные упражнения, ритм и уличная культура — для подростков и взрослых.</p>
+                </article>
+
+                <article class="card">
+                    <img src="images/children.jpg" alt="Детские группы" />
+                    <h3>Детские группы</h3>
+                    <p>Развитие координации, ритма и уверенности — занятия для детей от 5 лет.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="container benefits">
+            <h2>Почему выбирают нас</h2>
+            <ul class="benefit-list">
+                <li>Опытные преподаватели — чемпионы и педагоги с практикой.</li>
+                <li>Удобное расписание — утром и вечером, выходные.</li>
+                <li>Пробное занятие — попробуйте перед покупкой абонемента.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-row">
+                <div>
+                    <p><strong>Школа танцев «Круть-Верть»</strong></p>
+                    <p>г. Москва, ул. Танцевальная, д. 12</p>
+                    <p>Тел.: <a href="tel:+79206039665">+7 (920) 603-96-65</a></p>
+                    <p>Email: <a href="mailto:info@danceschool.ru">info@danceschool.ru</a></p>
+                </div>
+                <div>
+                    <p>Часы работы:</p>
+                    <p>Пн–Пт: 10:00–21:00 • Сб: 10:00–18:00</p>
+                </div>
+            </div>
+            <p class="copyright">© <span id="year"></span> Школа танцев «Круть-Верть»</p>
+        </div>
+    </footer>
+
+    <script>
+        // автоматическое обновление года в footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
